@@ -42,13 +42,13 @@ const Header = () => {
       }
     });
 
-    // Unsiubscribe when component unmounts
+    // Unsubscribe when component unmounts
     return () => unsubscribe();
   }, []);
 
 
   return (
-    <div className='absolute z-10 w-screen bg-linear-to-b from-black flex items-center justify-between  '>
+    <div className='absolute z-10 w-full bg-linear-to-b from-black flex items-center justify-between  '>
       <img className='w-52  h-30  px-8 ' src={Logo} alt="logo" />
       {user &&
         <div className='flex pr-7'>

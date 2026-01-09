@@ -7,12 +7,10 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase.js";
-import { useNavigate } from "react-router-dom";
 import { addUser } from "../utils/userSlice.js";
 import { useDispatch } from "react-redux";
 
 const Login = () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch()
 
 
@@ -77,7 +75,7 @@ const Login = () => {
         .then((userCredential) => {
           const user = userCredential.user;
 
-          navigate("/browse")
+
 
         })
         .catch((error) => {
@@ -94,8 +92,8 @@ const Login = () => {
     <div>
       <Header />
 
-      <div className="absolute w-screen">
-        <img className="w-screen"
+      <div className="absolute w-full">
+        <img className="w-full"
           src="https://assets.nflxext.com/ffe/siteui/vlv3/c81956f1-5750-454c-9b3c-7a4d990d3d06/web/IN-en-20251208-TRIFECTA-perspective_d69f5f82-9a35-45d7-a7b6-9af6e0643bf5_medium.jpg"
           alt="background"
         />
